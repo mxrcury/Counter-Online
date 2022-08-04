@@ -1,0 +1,125 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.btn-show-text {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.plus {
+  width: 100%;
+  height: 100%;
+  background: url("../img/icons/plus.png") no-repeat/cover;
+}
+
+.header {
+  padding-top: 40px;
+}
+.header__title {
+  font-size: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease;
+}
+.header__title::before {
+  content: '';
+  display: inline-block;
+  transition: .2s ease;
+  border-radius: 3px;
+  border-left: 22px solid #2f2f2f;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-top: 14px solid transparent;
+}
+.header__title.active::before {
+  position: relative;
+  transform: translateY(30%) rotate(90deg);
+}
+.header__about {
+  max-width: 500px;
+  font-size: 20px;
+  text-align: justify;
+  visibility: hidden;
+  transition: .06s ease-in;
+  opacity: 0;
+  transform: translateY(-20%);
+}
+.header__about.text-content--shown {
+  visibility: visible;
+  transform: translateY(0%);
+  opacity: 1;
+}
+.header__link {
+  color: #2f2f2f;
+  font-size: 18px;
+  font-weight: 600;
+}
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.counter-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.counter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter__btn {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  outline: 0;
+  border-radius: 3px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .1s ease;
+  margin-right: 20px;
+}
+.counter__btn:active {
+  transform: translateY(-9%);
+}
+.counter__btn:last-child {
+  margin-left: 20px;
+}
+.counter__input {
+  width: 90px;
+  height: 90px;
+  font-size: 59px;
+  text-align: center;
+  border-radius: 10px;
+  outline: 0;
+  border: 0;
+  background: transparent;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer .copyright-text {
+  text-align: center;
+  font-size: 18px;
+}
+
+.fw--thick {
+  font-weight: 600;
+}
+
+.fz--small {
+  font-size: 18px;
+}
